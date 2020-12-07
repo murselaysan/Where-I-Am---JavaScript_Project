@@ -8,8 +8,11 @@ const apiKey = "a50ac500-34d6-11eb-af30-3dfb1df4affe";  // this is mine, take yo
 
 const whereAmI = function (lat, lng) {
   let regionFromFirstAPI;
+
   const url = "https://app.geocodeapi.io/api/v1/reverse?apikey=";
+
   const coordinates = `&point.lat=${lat}&point.lon=${lng}`;
+  
   fetch(url + apiKey + coordinates)
     .then((res) => {
       if (!res.ok)
