@@ -1,7 +1,10 @@
 
 const btn = document.querySelector(".btn-country");
+
 const countriesContainer = document.querySelector(".countries");
+
 const latitudeInput = document.querySelector("#latitude");
+
 const longitudeInput = document.querySelector("#longitude");
 
 const apiKey = "a50ac500-34d6-11eb-af30-3dfb1df4affe";  // this is mine, take yours !!!
@@ -12,7 +15,7 @@ const whereAmI = function (lat, lng) {
   const url = "https://app.geocodeapi.io/api/v1/reverse?apikey=";
 
   const coordinates = `&point.lat=${lat}&point.lon=${lng}`;
-  
+
   fetch(url + apiKey + coordinates)
     .then((res) => {
       if (!res.ok)
